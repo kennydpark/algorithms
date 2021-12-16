@@ -6,8 +6,7 @@ function solution(statues) {
   statues.sort(function (a, b) { return a - b });
   for (let i = 1; i < statues.length; i++) {
     if ((statues[i] - statues[i - 1]) !== 1) {
-      count += statues[i] - statues[i - 1]
-      count--
+      count += statues[i] - statues[i - 1] - 1
     }
   }
   return count;
