@@ -1,1 +1,1 @@
-# algorithms
+Algorithms practice solutions
