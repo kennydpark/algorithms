@@ -22,3 +22,9 @@ const firstPlace1 = road => {
     return road.match(/[A-Z]/gi).pop()
   }
 }
+
+const firstPlace2 = road => {
+  const r = [...road]
+  if (!r.length) { return 'No road available' }
+  return r.reverse().find(a => a != "=") || 'No car available'
+}
