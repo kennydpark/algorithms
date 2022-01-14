@@ -13,6 +13,20 @@ const changeEnough = (change, amountDue) => {
   }
 }
 
+// destructuring
+
+const changeEnough1 = (change, amountDue) => {
+  let [quarters, dimes, nickles, pennies] = change;
+
+  let total = (quarters * 0.25) + (dimes * 0.1) + (nickles * 0.05) + (pennies * 0.01)
+
+  if (total >= amountDue) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // alt
 
 const changeEnough2 = (change, amountDue) => {
@@ -26,5 +40,5 @@ const sum = arr => arr.reduce((total, num) => total + num, 0);
 
 const values = [0.25, 0.1, 0.05, 0.01];
 
-const changeEnough = (change, amountDue) =>
+const changeEnough3 = (change, amountDue) =>
   sum(change.map((amount, i) => amount * values[i])) >= amountDue;
